@@ -1,4 +1,5 @@
 import { StatusBar } from "expo-status-bar";
+import Constants from "expo-constants";
 import {
   StyleSheet,
   Text,
@@ -7,9 +8,12 @@ import {
   TouchableOpacity,
   ScrollView,
   SafeAreaView,
+  Platform,
 } from "react-native";
 import { FontAwesome } from "@expo/vector-icons";
 
+// console.log("constants>>>", Constants.platform);
+// console.log("Platform>>>", Platform.OS);
 // Custom ----
 const marginLeftAndRightCustom = 10;
 const paddingTopAndBottomCustom = 10;
@@ -234,6 +238,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: "#000",
+    marginTop: Constants.statusBarHeight,
     // alignItems: "center",
     justifyContent: "center",
   },
